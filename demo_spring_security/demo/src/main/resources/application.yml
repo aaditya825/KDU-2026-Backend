@@ -1,0 +1,5 @@
+security:
+  jwt:
+    issuer: "hands-on-demo"
+    secret: "9fA3KxQ2mP7LZcW8R4EJtN5VYH6uB0Ds"
+    access-token-minutes: 15

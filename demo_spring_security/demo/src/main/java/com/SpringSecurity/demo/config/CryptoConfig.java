@@ -1,0 +1,15 @@
+package com.SpringSecurity.demo.config;
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
+import org.springframework.security.crypto.password.PasswordEncoder;
+
+@Configuration
+public class CryptoConfig {
+
+    @Bean
+    public PasswordEncoder passwordEncoder() {
+        // BCrypt is a strong adaptive hash; Spring’s encoder handles salt internally.
+        return new BCryptPasswordEncoder();
+    }
+}
